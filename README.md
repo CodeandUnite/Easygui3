@@ -4,10 +4,10 @@
 Easygui2
 ==============
 
-Further development and maintenance for the Easygui project which has been shut down in 2010.
+Further development and maintenance for the Easygui project which was shut down in 2010
 --------------
 
-*To get the best idea of how easygui2 is different from easygui is to check example.py file.
+*To get the best idea of how easygui2 is different from easygui please check example.py file.<br>
 Uncomment and comment out the lines as necessary.*
 
 **Basic use of Easygui2**
