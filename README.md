@@ -43,7 +43,7 @@ Problems:<br>
 
 
 **Using callback with Easygui2 - a much better solution**<br>
-Just create a callback function which handles the input and returns "terminate" when you want to break input loop
+Just create a callback function which handles the input and returns "terminate" when you want to break the input loop.<br>
 Give this function as an optional argument when invoking:
 	import easygui2
 
@@ -61,17 +61,17 @@ Give this function as an optional argument when invoking:
 	easygui2.buttonbox("controller","robot", choices, callback=controller)
 	
 	
-**Not all Easygui2 functions support callback option**<br>
+**Note: Not all Easygui2 functions support callback option**<br>
 For some of the functions, it doesn't make sense to support it.<br>
 The full list of supported functions are:<br>
-boolbox   <br>
-buttonbox  <br>
-ccbox   <br>
-choicebox  <br>
-enterbox  <br>
-indexbox  <br>
-integerbox  <br>
-multchoicebox <br>
-ynbox   <br>
-multenterbox<br> 
+- boolbox   <br>
+- buttonbox  <br>
+- ccbox   <br>
+- choicebox  <br>
+- enterbox  <br>
+- indexbox  <br>
+- integerbox  <br>
+- multchoicebox <br>
+- ynbox   <br>
+- multenterbox<br> 
 
