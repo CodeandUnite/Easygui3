@@ -1,5 +1,6 @@
 
-Easygui2 - Further development and maintenance for the Easygui project which was shut down in 2010
+Easygui2<br>
+Further development and maintenance for the Easygui project which was shut down in 2010
 --------------
 
 *To get the best idea of how easygui2 is different from Easygui please check example.py file.<br>
@@ -32,7 +33,7 @@ You're probably thinking of something like this:
 		   ...  
 		...  
 		...  
-		elif input == "off":   
+		elif input == "OFF":   
 			break
 			
 Problems:<br>
@@ -53,14 +54,14 @@ Give this function as an optional argument when invoking:
 		 ...
 	 ...
 	 ...
-	 elif user_input == "off":
+	 elif user_input == "OFF":
 	  return "terminate" #this terminates the callback loop
 	  
-	choices = ["on", "off", "forward", "backward", "right", "left"]
+	choices = ["ON", "OFF", "forward", "backward", "right", "left"]
 	easygui2.buttonbox("controller","robot", choices, callback=controller)
 	
 	
-**Not all Easygui2 functions support callback option**
+**Not all Easygui2 functions support callback option**<br>
 For some of the functions, it doesn't make sense to support it.<br>
 The full list of supported functions are:<br>
 boolbox   <br>
