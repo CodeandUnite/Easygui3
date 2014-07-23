@@ -1,14 +1,10 @@
 
-
-
-Easygui2
-==============
-
-Further development and maintenance for the Easygui project which was shut down in 2010
+Easygui2 - Further development and maintenance for the Easygui project which was shut down in 2010
 --------------
 
 *To get the best idea of how easygui2 is different from Easygui please check example.py file.<br>
-Uncomment and comment out the lines as necessary.*
+Uncomment and comment out the lines as necessary.
+-There are some minor bugs fixed as well in Easygui2*
 
 **Basic use of Easygui2**
 
@@ -18,7 +14,7 @@ Uncomment and comment out the lines as necessary.*
 	if choice == "Yes":
 		...
 	
-**Using callback**<br>
+**Getting sequential inputs**<br>
 If you ever needed to get sequential inputs from a user with Easygui, you have probably noticed this problem by yourself.
 Let's say we have an robot we want to control. We want to be able to move it in all directions and to switch it on and off.
 (Exit on "OFF")
@@ -45,8 +41,9 @@ Problems:<br>
 - Every different window gets a new task-number or pid. This makes it harder to follow the window instances 
 
 
-**Using callback with Easygui2**<br>
-Just create a callback function 
+**Using callback with Easygui2 - a much better solution**<br>
+Just create a callback function which handles the input and returns "terminate" when you want to break input loop
+Give this function as an optional argument when invoking:
 	import easygui2
 
 	def controller(user_input):
@@ -62,3 +59,18 @@ Just create a callback function
 	choices = ["on", "off", "forward", "backward", "right", "left"]
 	easygui2.buttonbox("controller","robot", choices, callback=controller)
 	
+	
+**Not all Easygui2 functions support callback option**
+For some of the functions, it doesn't make sense to support it.<br>
+The full list of supported functions are:<br>
+boolbox   <br>
+buttonbox  <br>
+ccbox   <br>
+choicebox  <br>
+enterbox  <br>
+indexbox  <br>
+integerbox  <br>
+multchoicebox <br>
+ynbox   <br>
+multenterbox<br> 
+
