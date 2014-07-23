@@ -12,20 +12,21 @@ Uncomment and comment out the lines as necessary.*
 
 **Basic use of Easygui2**
 
-    import easygui
+    import easygui2
 
-	choice = easygui.buttonbox("body","title",["Yes","No"])
+	choice = easygui.buttonbox("Would you like some coffee?","Restaurant",["Yes","No"])
 	if choice == "Yes":
 		...
 	
-**Using callback**
-If you ever needed to get sequential inputs from a user with it, you have probably noticed this problem by yourself.
-I'll explain the problem with an example. Let's say we have an external device we want to control, a robot. We want to be able to move it in all directions and to switch it on and off.
+**Using callback**<br>
+If you ever needed to get sequential inputs from a user with easygui, you have probably noticed this problem by yourself.
+Let's say we have an robot we want to control. We want to be able to move it in all directions and to switch it on and off.
+(Exit on "OFF")
 You're probably thinking of something like this:
 
-	import easygui
+	import easygui2
 
-	choices = ["on", "off", "forward", "backward", "right", "left"] 
+	choices = ["ON", "OFF", "forward", "backward", "right", "left"] 
 	input= '' 
 	while input != "None": #happens when the user presses ESC  
 		input = easygui.buttonbox("controller","robot", choices)
@@ -37,3 +38,26 @@ You're probably thinking of something like this:
 		...  
 		elif input == "off":   
 			break
+			
+Problems:<br>
+- User can't move the GUI around the screen because after every input, the window closes and a new one appears in the original place.
+- Flickering happens after every choice, till the next window opens.
+- Every different window gets a new task-number or pid. This makes it harder to follow the window instances 
+
+
+**Using callback with Easygui2**
+	import easygui_callback
+
+	def controller(user_input):
+	 if user_input == "forward":
+		 ...
+	 elif user_input == "backward":
+		 ...
+	 ...
+	 ...
+	 elif user_input == "off":
+	  return "terminate" #this terminates the callback loop
+	  
+	choices = ["on", "off", "forward", "backward", "right", "left"]
+	easygui_callback.buttonbox("controller","robot", choices, callback=controller)
+	
