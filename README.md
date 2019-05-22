@@ -1,8 +1,2 @@
-# Welcome to EasyGui3 
-## This is an Adaptation from the easygui2 project by Robbie Brook and the easygui project by Robert Lugg 
 
-### Mission - Continue the good progress that Robbie Brook made in this project and add some new cool features to the GUI. 
-
-### Developers/Technical Writers Needed - CodeAndUnite Foundation is looking for leads in the development and technical writing area! PM pyrazolone on Reddit to apply.
-
-
+# It seems that the original application by Robert Lugg is in face being maintained again. Therefore, we have decided to not make duplicates and cease operations for this project. We ask that you please work on the many open bugs and enhancements that the original EasyGui has at https://github.com/robertlugg/easygui  
